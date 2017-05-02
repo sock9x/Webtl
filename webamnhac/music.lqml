@@ -1,0 +1,54 @@
+<?xml version="1.0" encoding="utf-8"?>
+<Database Name="Web_Ban_Nhac" EntityNamespace="WebBanNhacContext" ContextNamespace="WebBanNhacContext" Class="WebBanNhacDataContext" xmlns:ed="http://devart.com/schemas/EntityDeveloper/1.0" ed:Guid="aba39b06-3105-4850-b2c1-8f73e93d4af4" Provider="Devart.Data.SqlServer.Linq.Provider.SqlDataProvider, Devart.Data.SqlServer.Linq" Extended="true" xmlns="http://schemas.devart.com/linqconnect/mapping">
+  <Connection Mode="ConnectionString" ConnectionString="Data Source=sock9x;Initial Catalog=Web_Ban_Nhac;Integrated Security=True;Persist Security Info=True" Provider="System.Data.SqlClient" />
+  <Table Name="dbo.baihat" Member="Baihats">
+    <Type Name="Baihat" ed:Guid="ed70cc9b-1924-410c-8ba1-05be99bb3586">
+      <Column Name="ten" Member="Ten" Type="System.String" DbType="NVARCHAR(50)" CanBeNull="true" UpdateCheck="Never" MaxLength="50" Unicode="true" ed:ValidateMaxLength="50" ed:ValidateRequired="false" ed:Guid="32896629-272a-4795-a90f-a2375df5dc3e" />
+      <Column Name="ma" Member="Ma" Type="System.String" DbType="VARCHAR(20) NOT NULL" IsPrimaryKey="true" CanBeNull="false" UpdateCheck="Always" MaxLength="20" ed:ValidateMaxLength="20" ed:ValidateRequired="true" ed:Guid="e109d8ab-d361-415d-975c-2c76b57bd577" />
+      <Column Name="thoigianphathanh" Member="Thoigianphathanh" Type="System.DateTime" DbType="DATETIME" CanBeNull="true" UpdateCheck="Never" ed:ValidateRequired="false" ed:Guid="1429f35f-7fa9-4630-a90b-14a4c639be10" />
+      <Column Name="thoigianban" Member="Thoigianban" Type="System.DateTime" DbType="DATETIME" CanBeNull="true" UpdateCheck="Never" ed:ValidateRequired="false" ed:Guid="7c0a865b-399c-4379-937b-8a069f28e1e1" />
+      <Column Name="thongtin" Member="Thongtin" Type="System.String" DbType="NVARCHAR(1000)" CanBeNull="true" UpdateCheck="Never" MaxLength="1000" Unicode="true" ed:ValidateMaxLength="1000" ed:ValidateRequired="false" ed:Guid="a66fd5e1-0656-4801-9e68-5eaf71c2b780" />
+      <Column Name="anh" Member="Anh" Type="System.String" DbType="NVARCHAR(200)" CanBeNull="true" UpdateCheck="Never" MaxLength="200" Unicode="true" ed:ValidateMaxLength="200" ed:ValidateRequired="false" ed:Guid="b1ae0915-a097-4198-b6de-134e221fb95e" />
+      <Column Name="linkbaihat" Member="Linkbaihat" Type="System.String" DbType="NVARCHAR(1000)" CanBeNull="true" UpdateCheck="Never" MaxLength="1000" Unicode="true" ed:ValidateMaxLength="1000" ed:ValidateRequired="false" ed:Guid="9680bcb9-2c97-41c2-8fde-e3f32137f3d0" />
+      <Column Name="gia" Member="Gia" Type="System.Double" DbType="FLOAT" CanBeNull="true" UpdateCheck="Never" Precision="53" ed:ValidateRequired="false" ed:Guid="0bf4a40a-aed7-4134-b17f-57ce57f3e8ff" />
+      <Column Name="tentheloai" Member="Tentheloai" Type="System.String" DbType="NVARCHAR(50)" CanBeNull="true" UpdateCheck="Never" MaxLength="50" Unicode="true" ed:ValidateMaxLength="50" ed:ValidateRequired="false" ed:Guid="88d359ab-b80c-45b6-b177-527e957a38de" />
+      <Column Name="macasi" Member="Macasi" Type="System.String" DbType="VARCHAR(20)" CanBeNull="true" UpdateCheck="Never" MaxLength="20" ed:ValidateMaxLength="20" ed:ValidateRequired="false" ed:Guid="14d8e95e-1260-4650-bf02-4d6f8ea9e9e5" />
+      <Column Name="manhacsi" Member="Manhacsi" Type="System.String" DbType="VARCHAR(20)" CanBeNull="true" UpdateCheck="Never" MaxLength="20" ed:ValidateMaxLength="20" ed:ValidateRequired="false" ed:Guid="fd6b48dd-4491-49a9-9b87-9a488616b5c5" />
+      <Association Name="Theloai_Baihat" ed:AssociationGuid="c1572cde-0b23-4c7a-b593-d3418c41abbf" Member="Theloai" ed:Guid="5d8e8ef3-7671-41bc-bce3-959591ff162e" ThisKey="Tentheloai" OtherKey="Tentheloai" Type="Theloai" DeleteRule="NO ACTION" IsForeignKey="true" />
+      <Association Name="Nhacsi_Baihat" ed:AssociationGuid="bb155843-5cab-4f92-b560-6351a6aa5336" Member="Nhacsi" ed:Guid="308e8de2-285b-49d5-b2dd-72cdf7871cf2" ThisKey="Manhacsi" OtherKey="Manhacsi" Type="Nhacsi" DeleteRule="NO ACTION" IsForeignKey="true" />
+      <Association Name="Casi_Baihat" ed:AssociationGuid="900db1ba-63e4-4c8c-bdc4-06408ecdc42a" Member="Casi" ed:Guid="52910454-92e2-4ec0-9d5e-3100380d9393" ThisKey="Macasi" OtherKey="Macasi" Type="Casi" DeleteRule="NO ACTION" IsForeignKey="true" />
+    </Type>
+  </Table>
+  <Table Name="dbo.casi" Member="Casis">
+    <Type Name="Casi" ed:Guid="fed3a307-aed3-4fe0-a11a-af66880510dc">
+      <Column Name="tencasi" Member="Tencasi" Type="System.String" DbType="NVARCHAR(50)" CanBeNull="true" UpdateCheck="Never" MaxLength="50" Unicode="true" ed:ValidateMaxLength="50" ed:ValidateRequired="false" ed:Guid="27590422-54bc-44c2-a086-6856d8901efc" />
+      <Column Name="thongtin" Member="Thongtin" Type="System.String" DbType="NVARCHAR(MAX)" CanBeNull="true" UpdateCheck="Never" Unicode="true" ed:ValidateRequired="false" ed:Guid="92f6099a-55b7-42fa-b191-30524ec64e56" />
+      <Column Name="macasi" Member="Macasi" Type="System.String" DbType="VARCHAR(20) NOT NULL" IsPrimaryKey="true" CanBeNull="false" UpdateCheck="Always" MaxLength="20" ed:ValidateMaxLength="20" ed:ValidateRequired="true" ed:Guid="d922c111-33f0-4985-a878-273ff44d055b" />
+      <Association Name="Casi_Baihat" ed:AssociationGuid="900db1ba-63e4-4c8c-bdc4-06408ecdc42a" Member="Baihats" ed:Guid="b1f96244-fe35-4d3d-b1da-62ba8de3d572" ThisKey="Macasi" OtherKey="Macasi" Type="Baihat" />
+    </Type>
+  </Table>
+  <Table Name="dbo.khachhang" Member="Khachhangs">
+    <Type Name="Khachhang" ed:Guid="a7016cf7-fc93-4e75-abbe-f31b9a32e80d">
+      <Column Name="tenKH" Member="TenKH" Type="System.String" DbType="NVARCHAR(50)" CanBeNull="true" UpdateCheck="Never" MaxLength="50" Unicode="true" ed:ValidateMaxLength="50" ed:ValidateRequired="false" ed:Guid="2ffde73a-01d5-47ac-b164-82e74cf6380a" />
+      <Column Name="maKH" Member="MaKH" Type="System.String" DbType="VARCHAR(20) NOT NULL" IsPrimaryKey="true" CanBeNull="false" UpdateCheck="Always" MaxLength="20" ed:ValidateMaxLength="20" ed:ValidateRequired="true" ed:Guid="99ffef56-c642-4120-b39c-7ca27f1ea766" />
+      <Column Name="sodienthoai" Member="Sodienthoai" Type="System.String" DbType="VARCHAR(11)" CanBeNull="true" UpdateCheck="Never" MaxLength="11" ed:ValidateMaxLength="11" ed:ValidateRequired="false" ed:Guid="a7025983-42f3-4ef6-98ae-1495c74bd0da" />
+      <Column Name="diachi" Member="Diachi" Type="System.String" DbType="NVARCHAR(50)" CanBeNull="true" UpdateCheck="Never" MaxLength="50" Unicode="true" ed:ValidateMaxLength="50" ed:ValidateRequired="false" ed:Guid="7174d569-a09a-4f9d-bef7-06520d21974a" />
+      <Column Name="taikhoan" Member="Taikhoan" Type="System.String" DbType="NVARCHAR(50)" CanBeNull="true" UpdateCheck="Never" MaxLength="50" Unicode="true" ed:ValidateMaxLength="50" ed:ValidateRequired="false" ed:Guid="7ae1937d-248c-46f3-a836-99c2012caa8e" />
+      <Column Name="matkhau" Member="Matkhau" Type="System.String" DbType="VARCHAR(20)" CanBeNull="true" UpdateCheck="Never" MaxLength="20" ed:ValidateMaxLength="20" ed:ValidateRequired="false" ed:Guid="d94cbe06-03ec-47c6-9d05-90aafc40ce3d" />
+    </Type>
+  </Table>
+  <Table Name="dbo.nhacsi" Member="Nhacsis">
+    <Type Name="Nhacsi" ed:Guid="6afc0ec0-2aec-4dd5-b594-8f25c99f3981">
+      <Column Name="tennhacsi" Member="Tennhacsi" Type="System.String" DbType="NVARCHAR(50)" CanBeNull="true" UpdateCheck="Never" MaxLength="50" Unicode="true" ed:ValidateMaxLength="50" ed:ValidateRequired="false" ed:Guid="8002c045-d324-495a-ab18-88b80516348e" />
+      <Column Name="manhacsi" Member="Manhacsi" Type="System.String" DbType="VARCHAR(20) NOT NULL" IsPrimaryKey="true" CanBeNull="false" UpdateCheck="Always" MaxLength="20" ed:ValidateMaxLength="20" ed:ValidateRequired="true" ed:Guid="21fe448a-ac8f-45a7-a481-b98a877f90fc" />
+      <Association Name="Nhacsi_Baihat" ed:AssociationGuid="bb155843-5cab-4f92-b560-6351a6aa5336" Member="Baihats" ed:Guid="af025cdf-ef5b-431a-a190-147720d33710" ThisKey="Manhacsi" OtherKey="Manhacsi" Type="Baihat" />
+    </Type>
+  </Table>
+  <Table Name="dbo.theloai" Member="Theloais">
+    <Type Name="Theloai" ed:Guid="1b4ad046-8771-45ad-b815-da5110a06cb1">
+      <Column Name="tentheloai" Member="Tentheloai" Type="System.String" DbType="NVARCHAR(50) NOT NULL" IsPrimaryKey="true" CanBeNull="false" UpdateCheck="Always" MaxLength="50" Unicode="true" ed:ValidateMaxLength="50" ed:ValidateRequired="true" ed:Guid="47a92e78-0477-47cc-b578-c9c6fb9a3ac5" />
+      <Column Name="matheloai" Member="Matheloai" Type="System.String" DbType="VARCHAR(20)" CanBeNull="true" UpdateCheck="Never" MaxLength="20" ed:ValidateMaxLength="20" ed:ValidateRequired="false" ed:Guid="de7456ab-9482-424d-835f-cbb8c0699865" />
+      <Association Name="Theloai_Baihat" ed:AssociationGuid="c1572cde-0b23-4c7a-b593-d3418c41abbf" Member="Baihats" ed:Guid="c12866db-0cb3-4a34-bf29-33ed4346abdf" ThisKey="Tentheloai" OtherKey="Tentheloai" Type="Baihat" />
+    </Type>
+  </Table>
+</Database>

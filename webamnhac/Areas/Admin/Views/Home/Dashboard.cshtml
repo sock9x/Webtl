@@ -1,0 +1,190 @@
+﻿
+@{
+    ViewBag.Title = "Dashboard";
+    Layout = "~/Areas/Admin/Views/Shared/_LayoutPage1.cshtml";
+}
+
+            <!--Content Start-->
+<div id="content">
+    <div class="datalist">
+        <div class="heading">
+            <h2>Data Lists</h2>
+            <select name="sort">
+                <option>Sort By</option>
+                <option>Option1</option>
+                <option>Option2</option>
+            </select>
+        </div>
+        <ul id="lst">
+
+            <li>
+                <div class="chk"><a id="checkall"></a> </div>
+                <p class="title"><strong>Title</strong></p>
+                <p class="descripHead">Description</p>
+                <p class="incHead">Increace by</p>
+                <p class="decHead">Decrease by</p>
+                <p class="editHead">Edit/Delete</p>
+            </li>
+            <div class="auto">
+                <li class="odd">
+                    <div class="chk">
+                        <label>
+                            <input class="chkl" type="checkbox" name="chk" value="checkbox" />
+                        </label>
+                    </div>
+                    <p class="title">Lorem ipsum</p>
+                    <p class="descrip">Donec vel nunc lacus, non sodales lacus.</p>
+                    <p class="inc">0.02</p>
+                    <p class="dec">9.98</p>
+                    <p class="edit"><a href="#"><img src="~/Areas/Admin/fileadmin/images/editIco.png" alt="" /></a> <a href="#"><img src="~/Areas/Admin/fileadmin/images/deletIco.png" alt="" /></a></p>
+                </li>
+                <li>
+                    <div class="chk">
+                        <label>
+                            <input class="chkl" type="checkbox" name="chk" value="checkbox" />
+                        </label>
+                    </div>
+                    <p class="title">Lorem ipsum</p>
+                    <p class="descrip">Donec vel nunc lacus, non sodales lacus.</p>
+                    <p class="inc">0.02</p>
+                    <p class="dec">9.98</p>
+                    <p class="edit"><a href="#"><img src="~/Areas/Admin/fileadmin/images/editIco.png" alt="" /></a> <a href="#"><img src="~/Areas/Admin/fileadmin/images/deletIco.png" alt="" /></a></p>
+                </li>
+                <li>
+                    <div class="chk">
+                        <label>
+                            <input class="chkl" type="checkbox" name="chk" value="checkbox" />
+                        </label>
+                    </div>
+                    <p class="title">Lorem ipsum</p>
+                    <p class="descrip">Donec vel nunc lacus, non sodales lacus.</p>
+                    <p class="inc">0.02</p>
+                    <p class="dec">9.98</p>
+                    <p class="edit"><a href="#"><img src="~/Areas/Admin/fileadmin/images/editIco.png" alt="" /></a> <a href="#"><img src="~/Areas/Admin/fileadmin/images/deletIco.png" alt="" /></a></p>
+                </li>
+                <li>
+                    <div class="chk">
+                        <label>
+                            <input class="chkl" type="checkbox" name="chk" value="checkbox" />
+                        </label>
+                    </div>
+                    <p class="title">Lorem ipsum</p>
+                    <p class="descrip">Donec vel nunc lacus, non sodales lacus.</p>
+                    <p class="inc">0.02</p>
+                    <p class="dec">9.98</p>
+                    <p class="edit"><a href="#"><img src="~/Areas/Admin/fileadmin/images/editIco.png" alt="" /></a> <a href="#"><img src="~/Areas/Admin/fileadmin/images/deletIco.png" alt="" /></a></p>
+                </li>
+                <li>
+                    <div class="chk">
+                        <label>
+                            <input class="chkl" type="checkbox" name="chk" value="checkbox" />
+                        </label>
+                    </div>
+                    <p class="title">Lorem ipsum</p>
+                    <p class="descrip">Donec vel nunc lacus, non sodales lacus.</p>
+                    <p class="inc">0.02</p>
+                    <p class="dec">9.98</p>
+                    <p class="edit"><a href="#"><img src="~/Areas/Admin/fileadmin/images/editIco.png" alt="" /></a> <a href="#"><img src="~/Areas/Admin/fileadmin/images/deletIco.png" alt="" /></a></p>
+                </li>
+                <li class="odd">
+                    <div class="chk">
+                        <label>
+                            <input class="chkl" type="checkbox" name="chk" value="checkbox" />
+                        </label>
+                    </div>
+                    <p class="title">Lorem ipsum</p>
+                    <p class="descrip">Donec vel nunc lacus, non sodales lacus.</p>
+                    <p class="inc">0.02</p>
+                    <p class="dec">9.98</p>
+                    <p class="edit"><a href="#"><img src="~/Areas/Admin/fileadmin/images/editIco.png" alt="" /></a> <a href="#"><img src="~/Areas/Admin/fileadmin/images/deletIco.png" alt="" /></a></p>
+                </li>
+                <li>
+                    <div class="chk">
+                        <label>
+                            <input class="chkl" type="checkbox" name="chk" value="checkbox" />
+                        </label>
+                    </div>
+                    <p class="title">Lorem ipsum</p>
+                    <p class="descrip">Donec vel nunc lacus, non sodales lacus.</p>
+                    <p class="inc">0.02</p>
+                    <p class="dec">9.98</p>
+                    <p class="edit"><a href="#"><img src="~/Areas/Admin/fileadmin/images/editIco.png" alt="" /></a> <a href="#"><img src="~/Areas/Admin/fileadmin/images/deletIco.png" alt="" /></a></p>
+                </li>
+            </div>
+        </ul>
+    </div>
+    <img src="~/Areas/Admin/fileadmin/images/sepLine.png" alt="" class="sepline" />
+    <div class="messages">
+        <div>
+            <img src="~/Areas/Admin/fileadmin/images/warningIco.png" alt="" />
+            <p>Warning Message, Lorem ipsum dolor sit amet, consectetur adipiscing elit Pellentesque quis.</p>
+        </div>
+        <div>
+            <img src="~/Areas/Admin/fileadmin/images/infoIcon.png" alt="" />
+            <p>Information Message, Lorem ipsum dolor sit amet, consectetur adipiscing elit.</p>
+        </div>
+        <div>
+            <img src="~/Areas/Admin/fileadmin/images/success.png" alt="" />
+            <p>Success Message, Lorem ipsum dolor sit amet, Nam bibendum sagittis lobortis.consectetur.</p>
+        </div>
+        <div>
+            <img src="~/Areas/Admin/fileadmin/images/errorIco.png" alt="" />
+            <p>Error Message, Lorem ipsum dolor sit amet, Nam bibendum sagittis lobortis.consectetur.</p>
+        </div>
+    </div>
+    <div id="calen">
+        <div id="yuicalendar1"></div>
+        <script type="text/javascript">
+// BeginWebWidget YUI_Calendar: yuicalendar1
+
+  (function() {
+    var cn = document.body.className.toString();
+    if (cn.indexOf('yui-skin-sam') == -1) {
+      document.body.className += " yui-skin-sam";
+    }
+  })();
+
+  var inityuicalendar1 = function() {
+    var yuicalendar1 = new YAHOO.widget.Calendar("yuicalendar1");
+
+    // The following event subscribers demonstrate how to handle
+    // YUI Calendar events, specifically when a date cell is
+    // selected and when it is unselected.
+    //
+    // See: http://developer.yahoo.com/yui/calendar/ for more
+    // information on the YUI Calendar's configurations and
+    // events.
+    //
+    // The YUI Calendar API cheatsheet can be found at:
+    // http://yuiblog.com/assets/pdf/cheatsheets/calendar.pdf
+    //
+    //--- begin event subscribers ---//
+    yuicalendar1.selectEvent.subscribe(selectHandler, yuicalendar1, true);
+    yuicalendar1.deselectEvent.subscribe(deselectHandler, yuicalendar1, true);
+    //--- end event subscribers ---//
+
+    yuicalendar1.render();
+  }
+
+  function selectHandler(event, data) {
+  // The JavaScript function subscribed to yuicalendar1.  It is called when
+  // a date cell is selected.
+  //
+  // alert(event) will show an event type of "Select".
+  // alert(data) will show the selected date as [year, month, date].
+  };
+
+  function deselectHandler(event, data) {
+  // The JavaScript function subscribed to yuicalendar1.  It is called when
+  // a selected date cell is unselected.
+  };
+
+  // Create the YUI Calendar when the HTML document is usable.
+  YAHOO.util.Event.onDOMReady(inityuicalendar1);
+
+
+// EndWebWidget YUI_Calendar: yuicalendar1
+        </script>
+    </div>
+</div>
+        </div>
